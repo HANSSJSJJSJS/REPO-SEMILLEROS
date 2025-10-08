@@ -50,3 +50,30 @@ CREATE TABLE Documentos (
 ) ENGINE=InnoDB;
 
 -- Fin del script
+USE proyecto_semi;
+
+-- Insertar usuarios de prueba para cada rol
+-- Todas las contraseñas son: Admin123
+
+-- Usuario ADMIN
+INSERT INTO Usuarios (nombre, email, contraseña, rol, activo) VALUES 
+('Administrador Principal', 'admin@proyecto.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ADMIN', 1);
+
+-- Usuario LIDER
+INSERT INTO Usuarios (nombre, email, contraseña, rol, activo) VALUES 
+('Juan Pérez - Líder', 'lider@proyecto.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'LIDER', 1);
+
+-- Usuario APRENDIZ
+INSERT INTO Usuarios (nombre, email, contraseña, rol, activo) VALUES 
+('María González - Aprendiz', 'aprendiz@proyecto.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'APRENDIZ', 1);
+
+-- Insertar un semillero de ejemplo (opcional)
+INSERT INTO Semilleros (nombre, descripcion, lider_id) VALUES 
+('Semillero de Innovación', 'Semillero dedicado a proyectos de innovación tecnológica', 2);
+
+-- Insertar un proyecto de ejemplo (opcional)
+INSERT INTO Proyectos (semillero_id, nombre, descripcion, fecha_inicio, estado) VALUES 
+(1, 'Sistema de Gestión', 'Desarrollo de sistema de gestión para semilleros', CURDATE(), 'EN EJECUCIÓN');
+
+-- Nota: Todas las contraseñas están encriptadas con password_hash()
+-- Contraseña de prueba para todos los usuarios: Admin123
