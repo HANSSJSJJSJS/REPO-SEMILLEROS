@@ -22,39 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login PHP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f3f3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        input {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-        }
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .mensaje {
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/Login.css">
 </head>
 <body>
 
@@ -64,6 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="contrasena" placeholder="Contraseña" required>
         <button type="submit">Ingresar</button>
         <div class="mensaje"><?= $mensaje ?></div>
+        <div class="registro-link">
+            ¿No tienes cuenta? <a href="registroapre.php">Regístrate aquí</a>
+        </div>
     </form>
 
 </body>
